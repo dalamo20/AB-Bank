@@ -1,4 +1,4 @@
-package BankEmployees;
+package com.BankEmployees;
 
 public class Employees {
     public static void main(String[] args){

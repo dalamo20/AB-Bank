@@ -7,6 +7,25 @@ public class Employee {
     private String department;
     private String position;
     private int employeeId;
+    private String empPassword;
+    private String empUserName;
+
+    public String getEmpPassword() {
+        return empPassword;
+    }
+
+    public String getEmpUserName() {
+        return empUserName;
+    }
+
+    public void setEmpPassword(String empPassword) {
+        this.empPassword = empPassword;
+    }
+
+    public void setEmpUserName(String empUserName) {
+        this.empUserName = empUserName;
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -62,22 +81,26 @@ public class Employee {
         this.employeeId = Integer.parseInt(employeeId);
     }
 
-    public Employee(String firstName, String lastName, int salary, String department, String position, int employeeId) {
+    public Employee(String firstName, String lastName, int salary, String department, String position, int employeeId, String empUserName, String empPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.department = department;
         this.position = position;
         this.employeeId = employeeId;
+        this.empUserName = empUserName;
+        this.empPassword = empPassword;
     }
 
-    public Employee(String firstName, String lastName, int salary, int employeeId) {
+    public Employee(String firstName, String lastName, int salary, int employeeId, String empUserName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.department = "";
         this.position = "";
         this.employeeId = employeeId;
+        this.empUserName = empUserName;
+        this.empPassword = "";
     }
 
     public Employee() {
@@ -87,5 +110,7 @@ public class Employee {
         this.department = "";
         this.position = "";
         this.employeeId = 0;
+        this.empUserName = "";
+        this.empPassword = "";
     }
 }

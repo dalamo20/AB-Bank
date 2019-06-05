@@ -1,65 +1,67 @@
 package com.BankEmployees;
 
+import java.util.Date;
+
 public class Employee {
-    private String firstName;
-    private String lastName;
-    private int salary;
-    private String department;
+    private String empName;
+    private double salary;
+    private String dept;
+    private int deptId;
     private String position;
-    private int employeeId;
-    private String empPassword;
-    private String empUserName;
-
-    public String getEmpPassword() {
-        return empPassword;
+    private int empId;
+    private String empPass;
+    private String empUser;
+    
+    public int getDeptId() {
+    	return deptId;
+    }
+    
+    public void setDeptId(int deptId) {
+    	this.deptId = deptId;
     }
 
-    public String getEmpUserName() {
-        return empUserName;
+    public String getEmpPass() {
+        return empPass;
     }
 
-    public void setEmpPassword(String empPassword) {
-        this.empPassword = empPassword;
+    public String getEmpUser() {
+        return empUser;
     }
 
-    public void setEmpUserName(String empUserName) {
-        this.empUserName = empUserName;
+    public void setEmpPass(String empPass) {
+        this.empPass = empPass;
+    }
+
+    public void setEmpUser(String empUser) {
+        this.empUser = empUser;
     }
 
 
-    public String getFirstName() {
-        return firstName;
+    public String getEmpName() {
+        return empName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setEmpName(String empName) {
+        this.empName = empName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
     public void setSalary(String salary) {
-        this.salary = Integer.parseInt(salary);
+        this.salary = Double.parseDouble(salary);
     }
 
-    public String getDepartment() {
-        return department;
+    public String getDept() {
+        return dept;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setDept(String dept) {
+        this.dept = dept;
     }
 
     public String getPosition() {
@@ -70,47 +72,33 @@ public class Employee {
         this.position = position;
     }
 
-    public int getEmployeeId() {
-        return employeeId;
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
+    public void setEmpId(int empId) {
+        this.empId = empId;
     }
-    public void setEmployeeId(String employeeId) {
-        this.employeeId = Integer.parseInt(employeeId);
+    public void setEmpId(String empId) {
+        this.empId = Integer.parseInt(empId);
     }
-
-    public Employee(String firstName, String lastName, int salary, String department, String position, int employeeId, String empUserName, String empPassword) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    
+    @Override
+    public String toString() {
+    	return "Employee [empId= " + empId + ", employee= "+ empName + ", position= "+ position 
+    			+ ", department= "+ dept + ", dept.Id= " + deptId + ", salary= " + salary + "]";
+    }
+    
+    public Employee(String empName, double salary, String dept, int deptId, String position, int empId, String empUser, String empPass) {
+        this.empName = empName;
         this.salary = salary;
-        this.department = department;
+        this.dept = dept;
+        this.deptId = deptId;
         this.position = position;
-        this.employeeId = employeeId;
-        this.empUserName = empUserName;
-        this.empPassword = empPassword;
+        this.empId = empId;
+        this.empUser = empUser;
+        this.empPass = empPass;
+        
     }
 
-    public Employee(String firstName, String lastName, int salary, int employeeId, String empUserName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.salary = salary;
-        this.department = "";
-        this.position = "";
-        this.employeeId = employeeId;
-        this.empUserName = empUserName;
-        this.empPassword = "";
-    }
-
-    public Employee() {
-        this.firstName = "";
-        this.lastName = "";
-        this.salary = 0;
-        this.department = "";
-        this.position = "";
-        this.employeeId = 0;
-        this.empUserName = "";
-        this.empPassword = "";
-    }
 }

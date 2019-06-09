@@ -1,7 +1,5 @@
 package com.BankEmployees;
 
-import java.util.Date;
-
 public class Employee {
     private String empName;
     private double salary;

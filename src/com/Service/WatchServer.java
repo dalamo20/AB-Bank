@@ -16,7 +16,7 @@ public class WatchServer {
 	    
 	    WatchService watchService = FileSystems.getDefault().newWatchService();
 	    
-	    Path path = Paths.get("D://WatchFolder");
+	    Path path = Paths.get("files");
 	 
 	     path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, 
 	          StandardWatchEventKinds.ENTRY_DELETE,StandardWatchEventKinds.ENTRY_MODIFY);

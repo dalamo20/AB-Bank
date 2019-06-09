@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExBank>
+<Account id=101 >
+</ACCID>
+<AccNum>1027643</AccNum>
+<AccType>Checking</AccType>
+<BankName>Byline Bank</BankName>
+   <Customer id= 101>
+      <firstname>phil</firstname>
+      <lastname>duke</lastname>
+      <address>123 Cal St.</address>
+   </Customer>
+</Account>
+
+<Account id=102>
+</ACCID>
+<AccNum>1003944</AccNum>
+<AccType>Checking</AccType>
+<BankName>TCF Bank</BankName>  
+   <Customer id =201>
+      <firstname>Vaneet</firstname>
+      <lastname>Gupta</lastname>
+      <nickname>451 Wine Ct.</nickname>
+   </Customer>
+</Account>
+
+<Account id=103>
+</ACCID>
+<AccNum>1034911</AccNum>
+<AccType>Savings</AccType>
+<BankName>Chase</BankName>
+   <Customer id= 301>
+      <firstname>jasmin</firstname>
+      <lastname>ha</lastname>
+      <address>802 Hampton Ave.</address>
+   </Customer>
+</Account>
+</ExBank>

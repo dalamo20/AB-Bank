@@ -36,4 +36,37 @@
       <address>802 Hampton Ave.</address>
    </Customer>
 </Account>
+<Account id=104>
+</ACCID>
+<AccNum>1034911</AccNum>
+<AccType>Savings</AccType>
+<BankName>Chase</BankName>
+   <Customer id= 301>
+      <firstname>jasmin</firstname>
+      <lastname>ha</lastname>
+      <address>802 Hampton Ave.</address>
+   </Customer>
+</Account>
+<Account id=105>
+</ACCID>
+<AccNum>1034911</AccNum>
+<AccType>Savings</AccType>
+<BankName>Chase</BankName>
+   <Customer id= 301>
+      <firstname>jasmin</firstname>
+      <lastname>ha</lastname>
+      <address>802 Hampton Ave.</address>
+   </Customer>
+</Account>
+<Account id=106>
+</ACCID>
+<AccNum>1034911</AccNum>
+<AccType>Savings</AccType>
+<BankName>Chase</BankName>
+   <Customer id= 301>
+      <firstname>jasmin</firstname>
+      <lastname>ha</lastname>
+      <address>802 Hampton Ave.</address>
+   </Customer>
+</Account>
 </ExBank>

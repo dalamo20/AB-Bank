@@ -24,10 +24,10 @@ public class XMLParser {
 	public static void main(String[] args) {
 		
 
-		File file = new File(ExBank.xml);
+		File file = new File(files);
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
-		Document xmlDoc = builder.parse(file);
+		Document xmlDoc = builder.parse(files);
 		
 		
 

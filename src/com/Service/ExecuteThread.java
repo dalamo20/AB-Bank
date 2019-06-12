@@ -8,9 +8,7 @@ public class ExecuteThread {
 	
 	public static void main(String[] args) {
 		
-		ExecutorService executorService = Executors.newFixedThreadPool(10);
-		
-		Runnable watch = new WatchServer();
+		WatchServer watch = new WatchServer();
 		Thread t = new Thread(watch);
 		t.start();
 		
@@ -19,10 +17,14 @@ public class ExecuteThread {
 				System.out.println("My task1 started...");		
 				System.out.println("My task1 ended.");
 				
+				ExecutorService executor = Executors.newFixedThreadPool(10);
 				
-				executorService.submit(watch);
-				
-				executorService.shutdown();
+				for (int i = 0; i <11; i++) {
+					executor.execute(new WatchServer());
+					executor.submit(watch);
+					i++;
+				}
+				executor.shutdown();
 				
 			}
 

@@ -3,6 +3,7 @@ package com.Service;
 import java.io.File;
 import java.io.IOException;
 import java.sql.PreparedStatement;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -24,10 +25,10 @@ public class XMLParser {
 	public static void main(String[] args) {
 		
 
-		File file = new File(files);
+		File file = new File(file);
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
-		Document xmlDoc = builder.parse(files);
+		Document xmlDoc = builder.parse(file);
 		
 		
 
@@ -77,37 +78,6 @@ public class XMLParser {
 	    }
 	    stmt.execute();
 	}
-	
-	
-//		SAXBuilder builder = new SAXBuilder();//dom SAX parser
-//		
-//		//read xml
-//		Document xml = null;
-//		try {
-//			xml= builder.build(new File("ExBank.xml"));
-//		}catch (JDOMException e) {
-//			e.printStackTrace();
-//		}catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		//get root elem
-//		Element root = xml.getRootElements();
-//		
-//		System.out.println("Root element of XML document is: " + root.getName());
-//		System.out.println("Number of children: " + root.getChildren().size());
-//		
-//		List Account = root.getChildren();
-//		
-//		//iterate over children
-//		Iterator itr = Account.iterator();
-//		while(itr.hasNext()) {
-//			Element Account = (Element) itr.next();
-//			
-//			System.out.println("Account ID is: " + Account.getAttributeValue("ID"));
-//			System.out.println("Customer is: " + root.getChildText("Customer"));
-//			
-//		}
 
 	}
 

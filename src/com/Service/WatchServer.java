@@ -10,9 +10,12 @@ import java.nio.file.WatchEvent.Kind;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 
-public abstract class WatchServer implements Runnable{
+public class WatchServer implements Runnable{
 
 	   public static void main(String[] args) throws IOException {
+			@Override
+			public void run() {
+
 	    
 	    WatchService watchService = FileSystems.getDefault().newWatchService();
 	    
@@ -45,5 +48,7 @@ public abstract class WatchServer implements Runnable{
 	         if (!reset)
 	            break;
 	     }
-	   }
+	   
+		
+	}
 	}

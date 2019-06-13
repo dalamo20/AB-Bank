@@ -1,4 +1,4 @@
-package com.Accounts;
+package com.bank.beans;
 
 public class Transactions {
 

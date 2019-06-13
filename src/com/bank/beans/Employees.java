@@ -1,5 +1,4 @@
-package com.BankEmployees;
-import java.util.*;
+package com.bank.beans;
 
 public class Employees {
     public static void main(String[] args){

@@ -12,20 +12,19 @@ import java.nio.file.WatchService;
 
 public class WatchServer implements Runnable{
 
-	   public static void main(String[] args) throws IOException {
 			@Override
 			public void run() {
 
-	    
+	    try {
 	    WatchService watchService = FileSystems.getDefault().newWatchService();
 	    
 	    Path path = Paths.get("files");
 	 
 	     path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, 
 	          StandardWatchEventKinds.ENTRY_DELETE,StandardWatchEventKinds.ENTRY_MODIFY);
-	 
+	    }catch (IOException ex) {
 	     System.out.println("Watch service registered for dir: " + path.toString());
-	 
+	    }
 	     WatchKey key = null;
 	     
 	     while (true) { 
@@ -35,7 +34,7 @@ public class WatchServer implements Runnable{
 	              key = watchService.take();
 	 
 	              for (WatchEvent<?> event : key.pollEvents()) {
-	                  
+	                  //call DOmParser and call db to here 
 	                   Kind<?> kind = event.kind();
 	                    
 	                   System.out.println("Event on " + event.context() + " is " + kind);
@@ -49,6 +48,6 @@ public class WatchServer implements Runnable{
 	            break;
 	     }
 	   
-		
+			}
 	}
-	}
+

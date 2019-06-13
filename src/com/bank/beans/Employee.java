@@ -1,4 +1,4 @@
-package com.BankEmployees;
+package com.bank.beans;
 
 public class Employee {
     private String empName;

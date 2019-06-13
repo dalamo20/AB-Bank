@@ -7,6 +7,7 @@ public class Main {
 	Scanner in = new Scanner(System.in);
 	int userChoice;
 	boolean exit = false;
+	float balance = 0f;
 	
 	do {
 		System.out.println("1. Create New Account");
@@ -18,15 +19,34 @@ public class Main {
 		switch(userChoice) {
 		case 1:
 			//create acct
+			System.out.println("Coming soon!");
 			break;
 		case 2:
 			//deposit
+			float amount;
+            System.out.print("Amount to deposit: ");
+            amount = in.nextFloat();
+            if (amount <= 0)
+            System.out.println("Invalid transaction!");
+            else {
+            balance += amount;
+            System.out.println("$" + amount + " deposited.");
+            }
 			break;
 		case 3:
 			//withdraw
+			System.out.println("Amount to withdraw: ");
+			amount = in.nextFloat();
+			if(amount <=0 || amount > balance) {
+				System.out.println("Invalid transaction!");
+			}else {
+				balance -= amount;
+				System.out.println("$" + amount + " withdrawn.");
+			}
 			break;
 		case 4:
 			//check balance
+			System.out.println("Balance: $" + balance);
 			break;
 		case 0:
 			exit = true;

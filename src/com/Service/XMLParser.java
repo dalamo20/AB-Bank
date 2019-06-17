@@ -25,7 +25,7 @@ public class XMLParser {
 	public static void main(String[] args) {
 		
 
-		File file = new File(file);
+		File file = new File(files);
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document xmlDoc = builder.parse(file);
